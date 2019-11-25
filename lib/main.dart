@@ -1,5 +1,8 @@
 
+
+import 'package:comunity_app/drawer.dart';
 import 'package:comunity_app/start.dart';
+import 'package:comunity_app/user.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,8 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.redAccent, accentColor: Colors.white),
       debugShowCheckedModeBanner: false,
-      home: Start(),
-
+      home: LightDrawerPage(),
 
     );
   }
