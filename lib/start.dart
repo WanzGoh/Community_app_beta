@@ -1,3 +1,4 @@
+import 'package:comunity_app/drawer.dart';
 import 'package:comunity_app/user.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -13,7 +14,7 @@ class _StartState extends State<Start> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), ()=>MaterialPageRoute(builder: (context) => UserPage()));
+    Timer(Duration(seconds: 3), ()=>print(LightDrawerPage()));
   }
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _StartState extends State<Start> {
           IconButton(
             icon: Icon(Icons.arrow_right, size: 50.0,),
             onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserPage()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => LightDrawerPage()));
             },
           )
         ],
@@ -35,7 +36,7 @@ class _StartState extends State<Start> {
 
             decoration:BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/colorfriends.jpg'), fit: BoxFit.cover, )),
+                    image: AssetImage('images/friendship.jpg'), fit: BoxFit.cover, )),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
